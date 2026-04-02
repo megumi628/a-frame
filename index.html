@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jost:wght@100&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a-scene embedded vr-mode-ui="enabled: false" background="color: #0d0d0d">
+    <a-assets>
+      <a-asset-item id="cube" src="scene.gltf"></a-asset-item>
+    </a-assets>
+    <a-gltf-model src="#cube" position="0.5 0 -4" scale="1.8 1.8 1.8"
+      animation="property: rotation; to: 15 360 10; loop: true; dur: 12000; easing: linear">
+    </a-gltf-model>
+    <a-light type="ambient" intensity="0.3"></a-light>
+    <a-light type="directional" position="5 8 4" intensity="2.0"></a-light>
+  </a-scene>
+
+  <div class="ui">
+    <span>Object Study · No. 001</span>
+    <h1>CUBE</h1>
+  </div>
+
+</body>
+</html>
